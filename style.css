@@ -1,0 +1,27 @@
+div {
+height:10vw;
+width: 10vw;
+background-color: blue;
+margin: 1em;
+}
+.animate{
+    animation: change 3s infinite;
+}
+@keyframes change{
+    25%{
+        background-color: aqua;
+        transform: translate(80vw);
+    }
+    50%{
+        background-color: black;
+        transform: translate(80vw, 80vw) rotate(-90deg);
+    }
+    75%{
+        background-color: firebrick;
+        transform: translate(0, 80vh) rotate(-180deg)
+    }
+    100%{
+        transform: rotate(-360deg)
+    }
+
+}
