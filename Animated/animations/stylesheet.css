@@ -1,0 +1,256 @@
+/*
+#container{
+    position: relative;
+}
+*/
+#hero {
+    height: 400px;
+    width: 250px;
+    position: absolute;
+    bottom: 70px;
+}
+
+header {
+    display: grid;
+    text-align: center;
+    font-size: 30px;
+}
+
+.move30 {
+    animation: 2s move30;
+}
+
+@keyframes move30 {
+    10% {
+        transform: translate(10vw);
+    }
+
+    100% {
+        transform: translate(30vw);
+    }
+}
+
+/* here to create the onejump animation */
+.oneJump {
+    animation: 2s oneJump;
+}
+
+@keyframes oneJump {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    50% {
+        transform: translateY(-35vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+/* here to create the jumping animation*/
+.jumping {
+    animation: 2s jumping;
+    animation-iteration-count: infinite;
+}
+
+@keyframes jumping {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    50% {
+        transform: translateY(-35vh);
+    }
+
+    100% {
+        transform: translateY(0vh);
+    }
+}
+
+/* here to create the glowing animation*/
+.glow {
+    animation: 1s glow ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px 0px #0000
+    }
+
+    to {
+        box-shadow: 0 0 10px 60px red
+    }
+}
+
+/* here to create move animation(across screen)*/
+.move {
+    animation: 1s move;
+}
+
+@keyframes move {
+    15% {
+        transform: translate(15vw);
+    }
+
+    30% {
+        transform: translate(30vw);
+    }
+
+    50% {
+        transform: translate(50vw);
+    }
+
+    80% {
+        transform: translate(80vw);
+    }
+
+    100% {
+        transform: translate(100vw);
+    }
+}
+
+/* here to create move animation from 30% across the screen*/
+.from30 {
+    animation: 2s from30;
+}
+
+@keyframes from30 {
+    0% {
+        transform: translate(30vw);
+    }
+
+
+    100% {
+        transform: translate(100vw);
+    }
+}
+
+
+/* here to create fade animation */
+
+.fade {
+    animation: 2s fade;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*here to create Fall down animation */
+
+.fall {
+    animation: 2s fall;
+}
+
+@keyframes fall {
+    50% {
+        transform: rotate(-100deg);
+    }
+
+    100% {
+        transform: rotate(-100deg);
+    }
+}
+
+/*here to create shake animation */
+
+.shake {
+    animation: 2s shake
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(3px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-8px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(8px, 0, 0);
+    }
+}
+
+/*here to create mirror effect*/
+
+.mirror {
+    animation: 2s mirror;
+    transform: scaleX(-1);
+}
+
+main {
+    display grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas:
+        "header main footer";
+}
+
+
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#move30,
+#oneJump,
+#jumping,
+#glow,
+#from30,
+#fade,
+#fall,
+#shake,
+#move,
+#mirror {
+    width: 100%;
+    background-color: orangered;
+    position: relative;
+    object-position: bottom;
+}
